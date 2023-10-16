@@ -1,0 +1,13 @@
+<p-accordion [activeIndex]="0">
+    <p-accordionTab *ngFor="let movie of movies" header={{movie.title}}>
+        <p>
+            {{movie.synopsis}}
+        </p>
+        <p>
+            {{movie.year}}
+        </p>
+        <p>
+            {{movie.cover}}
+        </p>
+    </p-accordionTab>
+</p-accordion>
