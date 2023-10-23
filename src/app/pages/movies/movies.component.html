@@ -1,4 +1,4 @@
-<p-accordion [activeIndex]="0">
+<p-accordion class="container h-100" [activeIndex]="0">
     <p-accordionTab *ngFor="let movie of movies" header={{movie.title}}>
         <p>
             {{movie.synopsis}}
@@ -9,5 +9,6 @@
         <p>
             {{movie.cover}}
         </p>
+        <a href="#">Link a la película</a>
     </p-accordionTab>
 </p-accordion>
