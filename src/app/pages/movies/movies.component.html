@@ -1,14 +1,11 @@
-<p-accordion class="container h-100" [activeIndex]="0">
-    <p-accordionTab *ngFor="let movie of movies" header={{movie.title}}>
-        <p>
-            {{movie.synopsis}}
-        </p>
-        <p>
-            {{movie.year}}
-        </p>
-        <p>
-            {{movie.cover}}
-        </p>
-        <a href="#">Link a la película</a>
-    </p-accordionTab>
-</p-accordion>
+<div class="list-group vh-100">
+    <a routerLink="movie" routerLinkActive="router-link-active" *ngFor="let movie of movies" href="movies/movie"
+        class="list-group-item list-group-item-action" aria-current="true">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{movie.title}}</h5>
+            <small>Año de estreno: {{movie.year}}</small>
+        </div>
+        <p class="mb-1">{{movie.synopsis}}</p>
+        <small>{{movie.cover}}</small>
+    </a>
+</div>
