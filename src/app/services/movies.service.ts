@@ -20,4 +20,12 @@ export class MoviesService {
       })
     );
   }
+
+  public addMovie(request: Movie): Observable<Movie> {
+    return this.http.post<Movie>(`${this.baseUrl}/movies`, request).pipe(
+      catchError((resp) => {
+        throw new Error(resp.errors)
+      })
+    )
+  }
 }
