@@ -1,0 +1,35 @@
+<!-- eslint-disable @angular-eslint/template/elements-content -->
+<p-dialog [(visible)]="isVisible" [style]="{ width: '450px' }" header="Editar libro" [modal]="true"
+    styleClass="p-fluid">
+    <ng-template pTemplate="content">
+        <form [formGroup]="form">
+            <div class="field">
+                <label for="title">Título</label>
+                <input formControlName="title" type="text" pInputText id="title" required />
+                
+            </div>
+            <div class="field">
+                <label for="synopsis">Sinopsis</label>
+                <input formControlName="synopsis" type="text" pInputText id="synopsis" required />
+               
+            </div>
+            <div class="field">
+                <label for="year">year</label>
+                <input formControlName="year" type="number" pInputText id="year" />
+            </div>
+            <div class="field">
+                <label for="cover">Cover</label>
+                <input formControlName="cover" type="text" pInputText id="cover" required />
+                
+            </div>
+        </form>
+    </ng-template>
+
+    <ng-template pTemplate="footer">
+        <button pButton pRipple label="Cancelar" icon="pi pi-times" class="p-button-text"
+            (click)="hideDialog()"></button>
+        <button pButton pRipple label="Guardar" icon="pi pi-check" class="p-button-text" (click)="saveMovie()"></button>
+    </ng-template>
+</p-dialog>
+
+<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>

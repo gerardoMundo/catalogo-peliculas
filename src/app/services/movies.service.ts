@@ -28,4 +28,20 @@ export class MoviesService {
       })
     )
   }
+
+  public editMovie(request: Movie, id: number): Observable<Movie> {
+    return this.http.put<Movie>(`${this.baseUrl}/movies/${id}`, request).pipe(
+      catchError((resp) => {
+        throw new Error(resp.errors)
+      })
+    )
+  }
+
+  public deleteMovie(id: number): Observable<Movie> {
+    return this.http.delete<Movie>(`${this.baseUrl}/movies/${id}`).pipe(
+      catchError((resp) => {
+        throw new Error(resp.errors)
+      })
+    )
+  }
 }

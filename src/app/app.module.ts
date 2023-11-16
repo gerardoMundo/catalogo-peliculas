@@ -7,6 +7,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from './pages/pages.module';
+import { PrimeNgModule } from './prime-ng/prime-ng.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -16,6 +17,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserAnimationsModule,
     HttpClientModule,
     PagesModule,
+    PrimeNgModule,
     RouterModule,
   ],
   providers: [],
